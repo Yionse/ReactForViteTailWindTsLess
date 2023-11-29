@@ -1,0 +1,2 @@
+# ReactForViteTailWindTsLess
+基于Vite搭建的React脚手架，内置了Less，Typescript，TailwindCss等库
