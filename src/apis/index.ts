@@ -15,6 +15,7 @@ httpInstance.interceptors.request.use(
     return config;
   },
   (error) => {
+    message.error("请求错误！");
     return Promise.reject(error);
   }
 );
