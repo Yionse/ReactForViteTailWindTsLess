@@ -1,6 +1,9 @@
 import { useQuery } from "react-query";
 import { fetchUpdateUserInfo } from "./apis/test";
 import { post } from "./apis";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Index from "@/pages/Index";
+import Home from "@/pages/Home";
 
 export default function App() {
   const { mutateAsync } = fetchUpdateUserInfo();
@@ -10,14 +13,12 @@ export default function App() {
   console.log(data?.testType);
 
   return (
-    <div
-      className="bg-slate-400"
-      onClick={async () => {
-        const data = await mutateAsync({ userId: "111" });
-        console.log(data.isSuccess);
-      }}
-    >
-      首页
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />}>
+          <Route path="home" element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
