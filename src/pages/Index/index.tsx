@@ -7,7 +7,6 @@ export default function Index() {
     <>
       <div>公共部分</div>
       <Outlet></Outlet>
-      <Button onClick={() => navigate("/home")}>去往Home</Button>
     </>
   );
 }

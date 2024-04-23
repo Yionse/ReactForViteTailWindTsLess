@@ -25,7 +25,7 @@ httpInstance.interceptors.response.use(
     return result.data;
   },
   (error) => {
-    message.error("网络错误！");
+    // message.error("网络错误！");
     // 可根据响应码对结果做不同处理
     return Promise.reject(error);
   }
