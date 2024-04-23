@@ -1,10 +1,11 @@
+import { useAppSelector } from "@/stores";
 import { Button } from "antd";
-import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export default function Todo() {
-  const state = useSelector((state) => state.counter.value);
+  const state = useAppSelector((state) => state.count.value);
   const navigate = useNavigate();
+  console.log(state);
   return (
     <>
       <div>Todo-{state}</div>

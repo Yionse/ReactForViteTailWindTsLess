@@ -1,8 +1,6 @@
-import { Button } from "antd";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export default function Index() {
-  const navigate = useNavigate();
   return (
     <>
       <div>公共部分</div>

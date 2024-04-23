@@ -1,11 +1,11 @@
+import { useAppDispatch, useAppSelector } from "@/stores";
 import { increment, decrement } from "@/stores/count";
 import { Button } from "antd";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export default function Count() {
-  const count = useSelector((state: any) => state.counter.value);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.count.value);
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   return (
     <>
